@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Numbers</title>
+
+		<script src="jquery.min.js"></script>
+		<script src="peer.min.js"></script>
+		<script src="peer.js"></script>
+		<script src="events.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="menu">
+			<div class="menu-button">
+				<div class="menu-button"><button name="play">Play</button></div>
+				<div class="menu-button"><button name="edit-deck">Edit Deck</button></div>
+				<div class="menu-button"><button name="rules">Rules</button></div>
+				<div class="menu-button"><button name="about">About</button></div>
+			</div>
+		</div>
+
+		<div id="game"></div>
+
+		<div id="edit">
+			<div id="deck-topbar">
+				Remember: the sum of your cards must equal <b>30</b> and that you must have <b>10</b> cards.
+			</div>
+
+			<div id="deck-controls">
+				Enter 10 digits from 1 to 5, representing the contents of your deck:
+				<br/>
+				<button name="save-deck">Save deck and go back</button>
+				<br/>
+				<input type="text" name="deck-input"/>
+			</div>
+
+
+			<div class="cards">
+				<div class="row">
+					<div class="col">
+						<div class="card">1</div>
+					</div>
+					<div class="col">
+						<div class="card">2</div>
+					</div>
+					<div class="col">
+						<div class="card">3</div>
+					</div>
+					<div class="col">
+						<div class="card">4</div>
+					</div>
+					<div class="col">
+						<div class="card">5</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="card">1</div>
+					</div>
+					<div class="col">
+						<div class="card">2</div>
+					</div>
+					<div class="col">
+						<div class="card">3</div>
+					</div>
+					<div class="col">
+						<div class="card">4</div>
+					</div>
+					<div class="col">
+						<div class="card">5</div>
+					</div>
+				</div>
+			</div>
+
+			<div id = "deck-info">
+				<div id = "deck-sum-info">
+					Sum of cards: 30
+				</div>
+				<div id = "deck-count-info">
+					Number of cards: 30
+				</div>
+			</div>
+		</div>
+
+		<div id="rules"></div>
+
+		<div id="about"></div>
+	</body>
+</html>

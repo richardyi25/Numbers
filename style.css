@@ -1,0 +1,84 @@
+body, button, input{
+	font: 20px Verdana, Sans;
+}
+
+#menu{
+	margin-top: 100;
+	text-align: center;
+}
+
+.menu-button{
+	margin: 5px;
+	padding: 5px;
+}
+
+.menu-button > button{
+	font-size: 40px;
+}
+
+.cards{
+	text-align: center;
+}
+
+.col{
+	display: inline-block;
+}
+
+.row{
+	display: block;
+}
+
+.card{
+	font-size: 30px;
+	margin: 2px;
+	width: 100px;
+	height: 160px;
+	border: 1px solid black;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card[color="color1"]{
+	color: red;
+}
+
+.card[color="color2"]{
+	color: orange;
+}
+
+.card[color="color3"]{
+	color: yellow;
+}
+
+.card[color="color4"]{
+	color: green;
+}
+
+.card[color="color5"]{
+	color: blue;
+}
+
+#deck-info{
+	margin: 50px;
+	text-align: center;
+	font-size: 30px;
+}
+
+#deck-topbar, #deck-controls{
+	font-size: 20px;
+	text-align: center;
+	margin: 10px;
+}
+
+input[name="deck-input"], button[name="save-deck"]{
+	text-align: center;
+	margin: 15px;
+}
+
+input[name="deck-input"]{
+	font-weight: bold;
+	font-size: 30px;
+}
+

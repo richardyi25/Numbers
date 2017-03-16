@@ -1,19 +1,15 @@
-function print(s){
-	$('#info').append('<div class = "info">' + s + '</div>');
-}
-
+var deck = [];
 var peer, conn;
 var sent = false, received = false;
 var to, from;
 var count = 0;
-var prevTo = [], prevFrom = [];
 
 function connect(c){
 	$('#id').hide();
 	$('#connect').hide();
 	$('#message').show();
 
-	print('Connection formed. The game has started!');
+	alert('Connection formed. The game has started!');
 
 	c.on('data', function(data){
 		receive(data);
@@ -48,8 +44,6 @@ function send(data){
 
 	if(received)
 		display();
-	else
-		print('Waiting for your opponent...');
 }
 
 function receive(data){
@@ -58,14 +52,14 @@ function receive(data){
 
 	if(sent)
 		display();
-	else
-		print('Your opponent is ready.');
 }
 
 function setID(){
 	peer = new Peer($('input[name="set-id"]').val(), {key: "vt963rvobi1cerk9"});
 
 	peer.on('open', function(id){
+		$('#set-id').hide();
+		$('#connect-id').show();
 		$('#your-id').text("Your ID is: " + id);
 	});
 
@@ -96,7 +90,7 @@ function sendMessage(){
 }
 
 function tryToConnect(){
-	conn = peer.connect($('input[name="id"]').val());
+	conn = peer.connect($('input[name="connect-id"]').val());
 	
 	conn.on('open', function(){
 		connect(conn);

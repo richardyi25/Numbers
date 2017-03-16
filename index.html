@@ -6,7 +6,7 @@
 
 		<script src="jquery.min.js"></script>
 		<script src="peer.min.js"></script>
-		<script src="peer.js"></script>
+		<script src="core.js"></script>
 		<script src="events.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
@@ -21,17 +21,145 @@
 			</div>
 		</div>
 
-		<div id="game"></div>
+		<div id="connect">
+			<div id="set-id">
+				Set your ID:
+				<input type="text" name="set-id"/>
+				<button name="confirm-id">Confirm</button>
+			</div>
+			<div id="connect-id">
+				<div id="your-id"></div>
+				Enter your opponent's ID to start a game:
+				<input type="text" name="connect-id"/>
+				<button name="connect">Connect</button>
+			</div>
+		</div>
+
+		<div id="game">
+			<div id="opponent-bar">
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+				<div class="opponent-card">
+					<div class="card"></div>
+				</div>
+			</div>
+
+			<div id="game-board">
+				<div id="opponent-score">OP</div>
+
+				<div id="board-info">
+					<div id="player-board-card">
+						<div class="card">5</div>
+					</div>
+					<div id="board-space">v.s.</div>
+					<div id="opponent-board-card">
+						<div class="card">1</div>
+					</div>
+				</div>
+
+				<div id="player-score">PL</div>
+			</div>
+
+			<div id="player-bar">
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+				<div class="player-card">
+					<div class="card"></div>
+				</div>
+			</div>
+		</div>
 
 		<div id="edit">
 			<div id="deck-topbar">
-				Remember: the sum of your cards must equal <b>30</b> and that you must have <b>10</b> cards.
+				Remember: the sum of your cards must equal <b>30</b> and that you must have <b>15</b> cards.
 			</div>
 
 			<div id="deck-controls">
-				Enter 10 digits from 1 to 5, representing the contents of your deck:
+				Enter 15 digits from 1 to 5, representing the contents of your deck:
 				<br/>
-				<button name="save-deck">Save deck and go back</button>
+				<button name="save-deck">Save deck and go back to main menu</button>
+				<br/>
+				<button name="save-play">Save deck and start game</button>
 				<br/>
 				<input type="text" name="deck-input"/>
 			</div>
@@ -72,14 +200,31 @@
 						<div class="card">5</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col">
+						<div class="card">1</div>
+					</div>
+					<div class="col">
+						<div class="card">2</div>
+					</div>
+					<div class="col">
+						<div class="card">3</div>
+					</div>
+					<div class="col">
+						<div class="card">4</div>
+					</div>
+					<div class="col">
+						<div class="card">5</div>
+					</div>
+				</div>
 			</div>
 
 			<div id = "deck-info">
 				<div id = "deck-sum-info">
-					Sum of cards: 30
+					Sum of cards: 45
 				</div>
 				<div id = "deck-count-info">
-					Number of cards: 30
+					Number of cards: 15
 				</div>
 			</div>
 		</div>

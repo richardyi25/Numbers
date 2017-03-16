@@ -7,6 +7,17 @@ body, button, input{
 	text-align: center;
 }
 
+#edit{
+	display: none;
+}
+
+#game{
+	display: none;
+	height: 95vh;
+	width: 100%;
+	margin: 0px auto;
+}
+
 .menu-button{
 	margin: 5px;
 	padding: 5px;
@@ -30,9 +41,10 @@ body, button, input{
 
 .card{
 	font-size: 30px;
+	font-weight: bold;
 	margin: 2px;
-	width: 100px;
-	height: 160px;
+	width: 5vw;
+	height: 7vw;
 	border: 1px solid black;
 	text-align: center;
 	display: flex;
@@ -41,23 +53,23 @@ body, button, input{
 }
 
 .card[color="color1"]{
-	color: red;
+	color: #E60000;
 }
 
 .card[color="color2"]{
-	color: orange;
+	color: #E65C00;
 }
 
 .card[color="color3"]{
-	color: yellow;
+	color: #E6E600;
 }
 
 .card[color="color4"]{
-	color: green;
+	color: #008000;
 }
 
 .card[color="color5"]{
-	color: blue;
+	color: #0000FF;
 }
 
 #deck-info{
@@ -82,3 +94,108 @@ input[name="deck-input"]{
 	font-size: 30px;
 }
 
+#connect{
+	display: none;
+}
+
+#set-id, #set-id > input{
+	font-weight: bold;
+	font-size: 30;
+	margin: 5px;
+}
+
+#connect-id{
+	display: none;
+}
+
+#your-id{
+	font-size: 40px;
+	font-weight: bold;
+	margin: 10px;
+}
+
+input[name="connect-id"]{
+	font-weight: bold;
+	font-size: 30;
+	margin: 5px;
+}
+
+.opponent-card, .player-card{
+	display: inline-block;
+}
+
+#opponent-bar{
+	padding: 5px;
+	border: 2px solid red;
+	position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#player-bar{
+	padding: 5px;
+	border: 2px solid blue;
+	position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#game-board{
+	position: relative;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#opponent-score{
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+
+#player-score{
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+}
+
+#board-info{
+	text-align: center;
+}
+
+#board-info > div{
+	display: inline-block;
+}
+
+#player-score{
+	border: 3px solid blue;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#opponent-score{
+	border: 3px solid red;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#board-space{
+	width: 30vh;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#player-board-card > .card{
+	font-size: 50px;
+	height: 20vw;
+	width: 15vw;
+	border: 3px solid blue;
+}
+
+#opponent-board-card > .card{
+	font-size: 50px;
+	height: 20vw;
+	width: 15vw;
+	border: 3px solid red;
+}

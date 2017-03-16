@@ -34,7 +34,7 @@ function display(){
 		$('#player-animation').fadeIn(500);
 		window.setTimeout(function(){
 			$('#player-animation').hide();
-		}, 1000);
+		}, 1500);
 	}
 	else if(from > to){
 		++opponentScore;
@@ -43,7 +43,7 @@ function display(){
 		$('#opponent-animation').fadeIn(500);
 		window.setTimeout(function(){
 			$('#opponent-animation').hide();
-		}, 1000);
+		}, 1500);
 	}
 	else{
 		$('#player-board-card > .card').css('background-color', '#FFFF99');
@@ -83,11 +83,15 @@ function display(){
 function newRound(){
 	++round;
 	turn = 0;
+	opponentKnown = [];
 	for(var i = 0; i < 15; i++){
 		used[i] = false;
 		$('.player-card:nth-of-type(' + (i + 1) + ') > .card').text(deck[i]);
 		$('.player-card:nth-of-type(' + (i + 1) + ') > .card').attr('color', 'color' + deck[i]);
 	}
+
+	$('.opponent-card > .card').attr('color', 'opponentBack');
+	$('.opponent-card > .card').text('?');
 }
 
 function checkGame(){

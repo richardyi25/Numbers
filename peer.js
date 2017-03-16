@@ -49,7 +49,9 @@ function setID(){
 		$('#your-id').text("Your ID is: " + id);
 	});
 
-	peer.on('error', function(err) { alert(err); });
+	peer.on('error', function(e){
+		alert(e);
+	});
 
 	peer.on('connection', connect);
 }

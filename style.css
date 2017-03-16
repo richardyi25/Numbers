@@ -225,3 +225,8 @@ input[name="connect-id"]{
 	background-color: white;
 	color: #0000FF;
 }
+
+.card[color="opponentBack"]{
+	background-color: #FF9999;
+	color: black;
+}

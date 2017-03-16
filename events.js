@@ -103,7 +103,7 @@ $(document).ready(function(){
 	});
 
 	$('.player-card').click(function(){
-		if(used[Number.parseInt(this.getAttribute('name'))] || (sent && !received))
+		if(used[Number.parseInt(this.getAttribute('name')) - 1] || (sent && !received))
 			return;
 
 		cardClicked(this.getAttribute('name'));

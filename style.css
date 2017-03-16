@@ -116,12 +116,14 @@ input[name="connect-id"]{
 }
 
 #opponent-score{
+	padding: 5px;
 	position: absolute;
 	top: 3px;
 	left: 3px;
 }
 
 #player-score{
+	padding: 5px;
 	position: absolute;
 	bottom: 3px;
 	right: 3px;
@@ -203,4 +205,12 @@ input[name="connect-id"]{
 .card[type="disabled"]{
 	color: black;
 	background-color: red;
+}
+
+.card[type="player-hidden"]{
+	background-color: #66CCFF;
+}
+
+.card[type="opponent-hidden"]{
+	background-color: #FF4D4D;
 }

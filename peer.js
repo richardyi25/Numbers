@@ -3,7 +3,7 @@ function connect(c){
 
 	$('#connect').hide();
 	$('#game').show();
-	startGame();
+	newRound();
 
 	conn.on('data', function(data){
 		receive(data);
@@ -36,6 +36,8 @@ function receive(data){
 		received = false;
 		display();
 	}
+	else
+		cardReceived();
 }
 
 function setID(){

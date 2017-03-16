@@ -1,4 +1,5 @@
 function checkDeck(){
+	deck = [];
 	var s = $('input[name="deck-input"]').val();
 	var count = 0;
 	var cards = 0;
@@ -27,7 +28,6 @@ function checkDeck(){
 	if(count != 45 || cards != 15){
 		$('button[name="save-deck"]').prop('disabled', true);
 
-
 		for(var r = 0; r < 3; r++){
 			for(var c = 0; c < 5; c++){
 				$('.row:nth-of-type(' + (r + 1) + ')>.col:nth-of-type(' + (c + 1) + ')>.card').text('!');
@@ -40,6 +40,7 @@ function checkDeck(){
 		$('#deck-info *').css('color', 'green');
 
 		deck.sort();
+		Cookies.set('deck', deck);
 
 		for(var r = 0; r < 3; r++){
 			for(var c = 0; c < 5; c++){
@@ -51,35 +52,23 @@ function checkDeck(){
 }
 
 $(document).ready(function(){
-	DEBUG = 0;
-
-	if(DEBUG){
-		$('#menu').hide();
-		$('#game').show();
-		deck = [1,1,1,2,2,2,3,3,3,4,4,4,5,5,5];
-		newRound();
-	}
+	var deckCookie = Cookies.getJSON('deck');
+	if(deckCookie != undefined)
+		deck = deckCookie;
+	else
+		deck = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5];
 
 	$('button[name="play"]').click(function(){
-		if(deck.length == 0){
-			alert("You don't have a deck yet!");
-			$('#menu').hide();
-			$('#edit').show();
-			$('input[name="deck-input"]').val('111222333444555');
-			checkDeck();
-		}
-		else{
-			$('#menu').hide();
-			$('#connect').show();
-			$('#set-id').show();
-			$('#connect-id').hide();
-		}
+		$('#menu').hide();
+		$('#connect').show();
+		$('#set-id').show();
+		$('#connect-id').hide();
 	});
 
 	$('button[name="edit-deck"]').click(function(){
 		$('#menu').hide();
 		$('#edit').show();
-		$('input[name="deck-input"]').val('111222333444555');
+		$('input[name="deck-input"]').val(deck.join(''));
 		checkDeck();
 	});
 	
@@ -88,13 +77,6 @@ $(document).ready(function(){
 	$('button[name="save-deck"]').click(function(){
 		$('#edit').hide();
 		$('#menu').show();
-	});
-
-	$('button[name="save-play"]').click(function(){
-		$('#edit').hide();
-		$('#connect').show();
-		$('#set-id').show();
-		$('#connect-id').hide();
 	});
 
 	$('button[name="confirm-id"]').click(setID);

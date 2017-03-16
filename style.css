@@ -39,39 +39,6 @@ body, button, input{
 	display: block;
 }
 
-.card{
-	font-size: 30px;
-	font-weight: bold;
-	margin: 2px;
-	width: 5vw;
-	height: 7vw;
-	border: 1px solid black;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.card[color="color1"]{
-	color: #E60000;
-}
-
-.card[color="color2"]{
-	color: #E65C00;
-}
-
-.card[color="color3"]{
-	color: #E6E600;
-}
-
-.card[color="color4"]{
-	color: #008000;
-}
-
-.card[color="color5"]{
-	color: #0000FF;
-}
-
 #deck-info{
 	margin: 50px;
 	text-align: center;
@@ -198,4 +165,42 @@ input[name="connect-id"]{
 	height: 20vw;
 	width: 15vw;
 	border: 3px solid red;
+}
+
+.card{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 2px;
+	width: 5vw;
+	height: 7vw;
+	border: 1px solid black;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card[color="color1"]{
+	color: #E60000;
+}
+
+.card[color="color2"]{
+	color: #E65C00;
+}
+
+.card[color="color3"]{
+	color: #E6E600;
+}
+
+.card[color="color4"]{
+	color: #008000;
+}
+
+.card[color="color5"]{
+	color: #0000FF;
+}
+
+.card[type="disabled"]{
+	color: black;
+	background-color: red;
 }

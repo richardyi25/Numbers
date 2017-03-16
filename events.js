@@ -62,6 +62,8 @@ $(document).ready(function(){
 		else{
 			$('#menu').hide();
 			$('#connect').show();
+			$('#set-id').show();
+			$('#connect-id').hide();
 		}
 	});
 
@@ -82,6 +84,8 @@ $(document).ready(function(){
 	$('button[name="save-play"]').click(function(){
 		$('#edit').hide();
 		$('#connect').show();
+		$('#set-id').show();
+		$('#connect-id').hide();
 	});
 
 	$('button[name="confirm-id"]').click(setID);
@@ -96,5 +100,12 @@ $(document).ready(function(){
 	$('input[name="connect-id"]').keyup(function(e){
 		if(e.which == 13)
 			tryToConnect();
+	});
+
+	$('.player-card').click(function(){
+		if(used[Number.parseInt(this.getAttribute('name'))] || (sent && !received))
+			return;
+
+		cardClicked(this.getAttribute('name'));
 	});
 });

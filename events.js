@@ -51,6 +51,15 @@ function checkDeck(){
 }
 
 $(document).ready(function(){
+	DEBUG = 0;
+
+	if(DEBUG){
+		$('#menu').hide();
+		$('#game').show();
+		deck = [1,1,1,2,2,2,3,3,3,4,4,4,5,5,5];
+		newRound();
+	}
+
 	$('button[name="play"]').click(function(){
 		if(deck.length == 0){
 			alert("You don't have a deck yet!");
@@ -103,7 +112,7 @@ $(document).ready(function(){
 	});
 
 	$('.player-card').click(function(){
-		if(used[Number.parseInt(this.getAttribute('name')) - 1] || (sent && !received))
+		if(used[Number.parseInt(this.getAttribute('name')) - 1] || (sent && !received) || locked)
 			return;
 
 		cardClicked(this.getAttribute('name'));

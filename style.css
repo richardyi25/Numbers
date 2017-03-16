@@ -115,18 +115,44 @@ input[name="connect-id"]{
 	align-items: center;
 }
 
-#opponent-score{
-	padding: 5px;
-	position: absolute;
-	top: 3px;
-	left: 3px;
-}
-
 #player-score{
 	padding: 5px;
 	position: absolute;
 	bottom: 3px;
 	right: 3px;
+	border: 3px solid blue;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#opponent-score{
+	padding: 5px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	border: 3px solid red;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#player-animation{
+	position: absolute;
+	bottom: 15px;
+	right: 70px;
+	color: green;
+	font-size: 25px;
+	font-weight: bold;
+	display: none;
+}
+
+#opponent-animation{
+	position: absolute;
+	top: 15px;
+	left: 70px;
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+	display: none;
 }
 
 #board-info{
@@ -135,18 +161,6 @@ input[name="connect-id"]{
 
 #board-info > div{
 	display: inline-block;
-}
-
-#player-score{
-	border: 3px solid blue;
-	font-size: 30px;
-	font-weight: bold;
-}
-
-#opponent-score{
-	border: 3px solid red;
-	font-size: 30px;
-	font-weight: bold;
 }
 
 #board-space{
@@ -182,35 +196,32 @@ input[name="connect-id"]{
 	align-items: center;
 }
 
+.card[color="color0"]{
+	background-color: red;
+	color: #000000;
+}
+
 .card[color="color1"]{
+	background-color: white;
 	color: #E60000;
 }
 
 .card[color="color2"]{
+	background-color: white;
 	color: #E65C00;
 }
 
 .card[color="color3"]{
+	background-color: white;
 	color: #E6E600;
 }
 
 .card[color="color4"]{
+	background-color: white;
 	color: #008000;
 }
 
 .card[color="color5"]{
+	background-color: white;
 	color: #0000FF;
-}
-
-.card[type="disabled"]{
-	color: black;
-	background-color: red;
-}
-
-.card[type="player-hidden"]{
-	background-color: #66CCFF;
-}
-
-.card[type="opponent-hidden"]{
-	background-color: #FF4D4D;
 }

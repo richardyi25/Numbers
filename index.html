@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Numbers</title>
+		<title>Numbers (Beta)</title>
 
 		<script src="jquery.min.js"></script>
 		<script src="peer.min.js"></script>
@@ -15,15 +15,15 @@
 
 	<body>
 		<div id="menu">
-			<div class="menu-button">
-				<div class="menu-button"><button name="play">Play</button></div>
-				<div class="menu-button"><button name="edit-deck">Edit Deck</button></div>
-				<div class="menu-button"><button name="rules">Rules</button></div>
-				<div class="menu-button"><button name="about">About</button></div>
-			</div>
+			<h1>Numbers (Beta)</h1>
+			<div class="menu-button"><button name="play">Play</button></div>
+			<div class="menu-button"><button name="edit-deck">Edit Deck</button></div>
+			<div class="menu-button"><button name="rules">Rules</button></div>
+			<div class="menu-button"><button name="about">About</button></div>
 		</div>
 
 		<div id="connect">
+			<button name="close-connect">Go back to main menu</button>
 			<div id="set-id">
 				Set your ID:
 				<input type="text" name="set-id"/>
@@ -231,8 +231,54 @@
 			</div>
 		</div>
 
-		<div id="rules"></div>
+		<div id="rules">
+			<p>
+				Each turn, a player plays a card from their deck.
+				<br/>
+				The player who played the higher card gains one point.
+				<br/>
+				The card played is then discarded.
+				<br/>
+				<img src="cards.png" width="200"/>
+			</p>
 
-		<div id="about"></div>
+			<p>
+				Player construct their own decks before starting a game, following 3 rules:
+				<ol>
+					<li>Each deck must contain <b>15</b> cards</li>
+					<li>Each card must have a value <b>between 1 and 5</b> (inclusive)</li>
+					<li>The sum of the card values must equal <b>45</b></li>
+				</ol>
+			</p>
+
+			<p>
+				At the end of 15 turns, the player with the most points wins.
+				<br/>
+				In the event of a tie, another game automatically begins.
+			</p>
+
+			<button name="close-rules">Go back to main menu</button>	
+		</div>
+
+		<div id="about">
+			<p>
+				Made by <a href="https://github.com/richardyi25">Richard Yi</a>
+			</p>
+
+			<p>
+				JavaScript Libraries Used:
+				<ul>
+					<li><a href="https://jquery.com/">JQuery</a></li>
+					<li><a href="http://peerjs.com/">PeerJS</a></li>
+					<li><a href="https://github.com/js-cookie/js-cookie">JS Cookie</a></li>
+				</ul>
+			</p>
+
+			<p>
+				The entire source code for this project can be found <a href="https://github.com/richardyi25/Numbers">here</a>
+			</p>
+
+			<button name="close-about">Go back to main menu</button>	
+		</div>
 	</body>
 </html>

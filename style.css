@@ -7,8 +7,19 @@ body, button, input{
 	text-align: center;
 }
 
-#edit{
+#edit, #rules, #about{
 	display: none;
+	text-align: center;
+}
+
+#rules, #about{
+	font-size: 30px;
+	margin: 0px auto;
+	max-width: 75%;
+}
+
+ol{
+	text-align: left;
 }
 
 #game{
@@ -121,7 +132,7 @@ input[name="connect-id"]{
 	bottom: 3px;
 	right: 3px;
 	border: 3px solid blue;
-	font-size: 30px;
+	font-size: 40px;
 	font-weight: bold;
 }
 
@@ -131,26 +142,26 @@ input[name="connect-id"]{
 	top: 3px;
 	left: 3px;
 	border: 3px solid red;
-	font-size: 30px;
+	font-size: 40px;
 	font-weight: bold;
 }
 
 #player-animation{
 	position: absolute;
-	bottom: 15px;
-	right: 70px;
+	bottom: 20px;
+	right: 80px;
 	color: green;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: bold;
 	display: none;
 }
 
 #opponent-animation{
 	position: absolute;
-	top: 15px;
-	left: 70px;
+	top: 20px;
+	left: 80px;
 	color: red;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: bold;
 	display: none;
 }

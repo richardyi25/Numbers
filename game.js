@@ -3,7 +3,7 @@ var peer, conn;
 var sent = false, received = false;
 var to, from;
 var playerScore = 0, opponentScore = 0;
-var turn = 0, round = 0;
+var turn = 0;
 var locked = false;
 
 function cardClicked(index){
@@ -81,7 +81,6 @@ function display(){
 }
 
 function newRound(){
-	++round;
 	turn = 0;
 	opponentKnown = [];
 	for(var i = 0; i < 15; i++){
@@ -96,7 +95,7 @@ function newRound(){
 
 function checkGame(){
 	if(turn == 15){
-		if(round > 2 && playerScore != opponentScore)
+		if(playerScore != opponentScore)
 			endGame();
 		else
 			newRound();

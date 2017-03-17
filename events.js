@@ -94,9 +94,32 @@ $(document).ready(function(){
 	});
 
 	$('.player-card').click(function(){
-		if(used[Number.parseInt(this.getAttribute('name')) - 1] || (sent && !received) || locked)
-			return;
+		if(!(used[Number.parseInt(this.getAttribute('name')) - 1] || (sent && !received) || locked))
+			cardClicked(this.getAttribute('name'));
+	});
 
-		cardClicked(this.getAttribute('name'));
+	$('button[name="rules"]').click(function(){
+		$('#menu').hide();
+		$('#rules').show();
+	});
+
+	$('button[name="about"]').click(function(){
+		$('#menu').hide();
+		$('#about').show();
+	});
+
+	$('button[name="close-rules"]').click(function(){
+		$('#rules').hide();
+		$('#menu').show();
+	});
+
+	$('button[name="close-about"]').click(function(){
+		$('#about').hide();
+		$('#menu').show();
+	});
+
+	$('button[name="close-connect"]').click(function(){
+		$('#connect').hide();
+		$('#menu').show();
 	});
 });
